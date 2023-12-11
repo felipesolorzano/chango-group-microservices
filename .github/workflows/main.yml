@@ -16,7 +16,7 @@ jobs:
 
       - name: npm install and build
         run: 
-          screen
+          screen 
           node ace build --production
           cd build
           npm run start

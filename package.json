@@ -8,8 +8,7 @@
     "start": "node server.js",
     "test": "node ace test",
     "lint": "eslint . --ext=.ts",
-    "format": "prettier --write .",
-    "serverless:start": "npm run build && sls offline"
+    "format": "prettier --write ."
   },
   "eslintConfig": {
     "extends": [

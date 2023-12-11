@@ -26,9 +26,4 @@ jobs:
           aws_region: us-east-1
           function_name: chango-group-microservices
           zip_file: bundle.zip
-      - name: npm install and build
-        run: |
-          npm install
-          npm run serverless:start
-        env:
-          CI: true
+      

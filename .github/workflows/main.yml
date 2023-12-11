@@ -13,7 +13,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-    
+
+      - name: npm install and build
+        run: 
+          npm install
+        env:
+          CI: true
       - name: zip
         uses: montudor/action-zip@v0.1.0
         with:
@@ -26,5 +31,6 @@ jobs:
           aws_region: us-east-1
           function_name: chango-group-microservices
           zip_file: bundle.zip
+      
       
       

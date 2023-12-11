@@ -1,0 +1,33 @@
+name: deploy to lambda
+on: [push]
+jobs:
+  deploy_source:
+    name: build and deploy lambda
+    strategy:
+      matrix:
+        node-version: [20.x]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm install and build
+        run: |
+          npm install
+          npm run serverless:start
+        env:
+          CI: true
+      - name: zip
+        uses: montudor/action-zip@v0.1.0
+        with:
+          args: zip -qq -r ./bundle.zip ./
+      - name: default deploy
+        uses: appleboy/lambda-action@master
+        with:
+          aws_access_key_id: AKIAQXTZXMLAVYYKIHNR
+          aws_secret_access_key: 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
+          aws_region: us-east-1
+          function_name: chango-group-microservices
+          zip_file: bundle.zip

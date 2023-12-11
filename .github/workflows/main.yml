@@ -2,7 +2,7 @@ name: deploy to lambda
 on: 
  push:
     paths:
-      - 'build/**'
+      - '.build/**' 
 jobs:
   deploy_source:
     name: build and deploy lambda
@@ -21,7 +21,6 @@ jobs:
         run: 
           npm install
           screen 
-          
           npm run start
         env:
           CI: true

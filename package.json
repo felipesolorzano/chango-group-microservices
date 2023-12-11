@@ -1,0 +1,13 @@
+{
+    "name": "chango-empleos-websocket",
+    "private": true,
+    "scripts": {},
+    "devDependencies": {
+        "typescript": "^4.9.4"
+    },
+    "dependencies": {
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "socket.io": "^4.6.1"
+    }
+}

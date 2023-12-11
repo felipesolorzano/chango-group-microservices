@@ -13,5 +13,26 @@
       "Database/*": ["./database/*"]
     },
     "types": ["@adonisjs/core", "@adonisjs/repl", "@japa/preset-adonis/build/adonis-typings"]
-  }
+  },
+
+  "baseUrl": ".",
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "declaration": false,
+    "lib": [
+      "ESNext"
+    ],
+    "outDir": ".build"
+
 }

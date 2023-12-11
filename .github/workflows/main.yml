@@ -26,8 +26,8 @@ jobs:
       - name: default deploy
         uses: appleboy/lambda-action@master
         with:
-          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_access_key_id: AKIAQXTZXMLAVYYKIHNR
+          aws_secret_access_key: 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
           aws_region: eu-west-1
           function_name: chango-group-microservices
           zip_file: bundle.zip

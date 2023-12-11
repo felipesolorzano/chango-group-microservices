@@ -29,6 +29,6 @@ jobs:
       - name: npm install and build
         run: |
           npm install
-          npm run serverless:start
         env:
           CI: true
+      

@@ -28,6 +28,6 @@ jobs:
         with:
           aws_access_key_id: AKIAQXTZXMLAVYYKIHNR
           aws_secret_access_key: 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
-          aws_region: us-west-1
+          aws_region: us-east-1
           function_name: chango-group-microservices
           zip_file: bundle.zip

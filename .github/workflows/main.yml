@@ -28,6 +28,8 @@ jobs:
           zip_file: bundle.zip
       - name: npm install and build
         run: |
+          cd build 
+          npm ci --production
           node server.js
         env:
           CI: true

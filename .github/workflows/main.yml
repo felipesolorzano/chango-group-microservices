@@ -1,8 +1,5 @@
 name: deploy to lambda
-on: 
- push:
-    paths:
-      - '.build/**' 
+on: [push]
 jobs:
   deploy_source:
     name: build and deploy lambda
@@ -20,6 +17,10 @@ jobs:
       - name: npm install and build
         run: 
           npm install
+          cd .buind
+          npm ci --production
+          screen
+          node server.js
         env:
           CI: true
       - name: zip
